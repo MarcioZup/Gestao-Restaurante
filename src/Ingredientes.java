@@ -6,7 +6,7 @@ public class Ingredientes {
     }
 
     public Ingredientes(String nomeDoIngrediente) {
-        this.ingredientes = ingredientes;
+        this.ingredientes = nomeDoIngrediente;
     }
 
     public String getNomeDoIngrediente() {
@@ -14,7 +14,7 @@ public class Ingredientes {
     }
 
     public void setNomeDoIngrediente(String nomeDoIngrediente) {
-        this.ingredientes = ingredientes;
+        this.ingredientes = nomeDoIngrediente;
     }
 
     @Override

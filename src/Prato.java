@@ -7,6 +7,7 @@ public class Prato {
     private double precoDoPrato;
     private List<Ingredientes> ingredientes = new ArrayList<>();
 
+
     public Prato(String nomeDoPrato, double precoDoPrato) {
         this.nomeDoPrato = nomeDoPrato;
         this.precoDoPrato = precoDoPrato;
@@ -46,7 +47,7 @@ public class Prato {
         StringBuilder retorno = new StringBuilder();
         retorno.append("Nome do Prato: " + nomeDoPrato);
         retorno.append("\nPreço do Prato: R$ " + precoDoPrato);
-        retorno.append("\nIngredientes: " + ingredientes.toString());
+        retorno.append("\nIngredientes: " + ingredientes);
         return retorno.toString();
     }
 }
