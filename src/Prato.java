@@ -5,7 +5,7 @@ public class Prato {
 
     private String nomeDoPrato;
     private double precoDoPrato;
-    private List<String> ingrediente = new ArrayList<String>();
+    private List<Ingredientes> ingredientes = new ArrayList<>();
 
     public Prato(String nomeDoPrato, double precoDoPrato) {
         this.nomeDoPrato = nomeDoPrato;
@@ -29,12 +29,13 @@ public class Prato {
         this.precoDoPrato = precoDoPrato;
     }
 
-    public List<String> getIngredientes() {
-        return ingrediente;
+    public List<Ingredientes> getIngredientes() {
+        return ingredientes;
     }
 
-    public void adicionaIngredientes(String novoIngrediente){
-        ingrediente.add(novoIngrediente);
+    public void adicionaIngredientes(Ingredientes novoIngrediente){
+        ingredientes.add(novoIngrediente);
+
     }
 
 
@@ -45,7 +46,7 @@ public class Prato {
         StringBuilder retorno = new StringBuilder();
         retorno.append("Nome do Prato: " + nomeDoPrato);
         retorno.append("\nPreço do Prato: R$ " + precoDoPrato);
-        retorno.append("\nIngredientes: " + getIngredientes());
+        retorno.append("\nIngredientes: " + ingredientes.toString());
         return retorno.toString();
     }
 }

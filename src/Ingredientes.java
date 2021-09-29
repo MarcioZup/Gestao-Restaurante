@@ -1,23 +1,26 @@
 public class Ingredientes {
 
-    private String ingrediente;
+    private String ingredientes;
+
+    public Ingredientes() {
+    }
 
     public Ingredientes(String nomeDoIngrediente) {
-        this.ingrediente = ingrediente;
+        this.ingredientes = ingredientes;
     }
 
     public String getNomeDoIngrediente() {
-        return ingrediente;
+        return ingredientes;
     }
 
     public void setNomeDoIngrediente(String nomeDoIngrediente) {
-        this.ingrediente = ingrediente;
+        this.ingredientes = ingredientes;
     }
 
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Nome do Ingrediente: " + ingrediente);
+        retorno.append("Nome do Ingrediente: " + ingredientes);
         return retorno.toString();
     }
 }
