@@ -22,11 +22,11 @@ public class Sistema {
         return prato1;
     }
 
-    public static Ingredientes cadastrarIngredientes(){
+    public static Ingrediente cadastrarIngredientes(){
         String nomeDoIngrediente = entradaTeclado("Digite os ingredientes: ").nextLine();
-        Ingredientes ingredientes = new Ingredientes();
-        ingredientes.setNomeDoIngrediente(nomeDoIngrediente);
-        return ingredientes;
+        Ingrediente ingrediente = new Ingrediente();
+        ingrediente.setNomeDoIngrediente(nomeDoIngrediente);
+        return ingrediente;
     }
 
     public static void executa(){
@@ -41,13 +41,10 @@ public class Sistema {
             switch (opcaoDigitada){
                 case 1:
                     Prato prato = cadastrarPrato();
-
-
                     int numeroDeIngredientes = entradaTeclado("Digite a quantidade de ingredientes: ").nextInt();
-                    for (int i = 0; i < numeroDeIngredientes; i++) {
-                        Ingredientes ingredientes = cadastrarIngredientes();
-                        prato.adicionaIngredientes(ingredientes);
-
+                        for (int i = 0; i < numeroDeIngredientes; i++) {
+                        Ingrediente ingrediente = cadastrarIngredientes();
+                        prato.adicionaIngredientes(ingrediente);
                     }
                     cardapio.adicionarPrato(prato);
                     break;

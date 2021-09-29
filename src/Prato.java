@@ -5,7 +5,7 @@ public class Prato {
 
     private String nomeDoPrato;
     private double precoDoPrato;
-    private List<Ingredientes> ingredientes = new ArrayList<>();
+    private List<Ingrediente> ingrediente = new ArrayList<>();
 
 
     public Prato(String nomeDoPrato, double precoDoPrato) {
@@ -30,12 +30,12 @@ public class Prato {
         this.precoDoPrato = precoDoPrato;
     }
 
-    public List<Ingredientes> getIngredientes() {
-        return ingredientes;
+    public List<Ingrediente> getIngrediente() {
+        return ingrediente;
     }
 
-    public void adicionaIngredientes(Ingredientes novoIngrediente){
-        ingredientes.add(novoIngrediente);
+    public void adicionaIngredientes(Ingrediente novoIngrediente){
+        ingrediente.add(novoIngrediente);
 
     }
 
@@ -45,9 +45,10 @@ public class Prato {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Nome do Prato: " + nomeDoPrato);
+        retorno.append("\nNome do Prato: " + nomeDoPrato);
         retorno.append("\nPreço do Prato: R$ " + precoDoPrato);
-        retorno.append("\nIngredientes: " + ingredientes);
+        retorno.append("\nIngredientes: " + ingrediente);
+        retorno.append("\n--------------------------------------------");
         return retorno.toString();
     }
 }

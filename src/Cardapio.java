@@ -24,7 +24,6 @@ public class Cardapio {
     public String toString() {
         StringBuilder retorno = new StringBuilder();
         retorno.append("Quantidade de pratos: ");
-        retorno.append("\n " + cardapio.size());
         retorno.append("\nPratos: ");
         retorno.append("\n " + cardapio);
 
