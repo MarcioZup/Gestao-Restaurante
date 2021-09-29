@@ -3,13 +3,18 @@ import java.util.List;
 
 public class Cardapio {
 
-    private List<Prato>cardapio = new ArrayList<>();
+    private List<Prato> cardapio = new ArrayList<>();
 
-    public List<Prato> getPratos() {
+    public Cardapio(List<Prato> cardapio) {
+        this.cardapio = cardapio;
+    }
+
+    public List<Prato> getCardapio() {
         return cardapio;
     }
 
-    public void adicionaPratos(Prato novoPrato){
+    public void adicionarPrato(Prato novoPrato) {
         cardapio.add(novoPrato);
     }
 }
+
